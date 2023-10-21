@@ -3,9 +3,9 @@ import styles from './Time.module.scss';
 const Time = ({ time }) => {
   const formatTime = millseconds => {
 
-    let seconds = millseconds / 1000;
-    let minutes = seconds / 60;
-    let hours = minutes / 60;
+    let seconds = Math.floor(millseconds / 1000);
+    let minutes = Math.floor(seconds / 60);
+    let hours = Math.floor(minutes / 60);
 
     return hours + ':' + minutes + ':' + seconds;
   };
