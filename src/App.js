@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <h1>React Stopwatch</h1>
       <Time {...time} />
-      <Button onClick={startTime}/>Start<Button/>
+      <Button onClick={startTime}>Start</Button>
       <Button onCLick={stopTime}>Stop</Button>
       <Button onClick={resetTime}>Reset</Button>
     </div>
