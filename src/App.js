@@ -16,8 +16,8 @@ function App() {
   const startTime = () => {
     if (!timer) {
       setTimer(setInterval(() =>{
-        setTime(prevValue => prevValue + 1000);
-      }, 1000))
+        setTime(prevValue => prevValue + 50);
+      }, 50))
     }
   }
 
@@ -35,7 +35,7 @@ function App() {
       <h1>React Stopwatch</h1>
       <Time time={time}/>
       <Button onClick={startTime}>Start</Button>
-      <Button onCLick={stopTime}>Stop</Button>
+      <Button onClick={stopTime}>Stop</Button>
       <Button onClick={resetTime}>Reset</Button>
     </div>
   );
