@@ -7,11 +7,12 @@ const Time = ({ time }) => {
     // let minutes = Math.floor(seconds / 60);
     // let hours = Math.floor(minutes / 60);
 
-    let seconds = Math.floor((millseconds / 1000) % 60);
-    let minutes = Math.floor((seconds / 60) % 60);
-    let hours = Math.floor((minutes / 60) % 24);
+    let mills = Math.floor(millseconds % 1000).toString().padStart(3, '0');
+    let seconds = Math.floor((millseconds / 1000) % 60).toString().padStart(2, '0');
+    let minutes = Math.floor((seconds / 60) % 60).toString().padStart(2, '0');
+    let hours = Math.floor((minutes / 60) % 24).toString().padStart(2, '0');
 
-    return hours + ':' + minutes + ':' + seconds;
+    return hours + ':' + minutes + ':' + seconds + '.' + mills;
   };
 
   return (
